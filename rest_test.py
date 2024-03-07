@@ -38,7 +38,8 @@ def main():
             configData = json.load(file_ptr)
             file_ptr.close()
             print("")
-            print("configData:  %s" %configData)
+            print("configData: \n%s" %(json.dumps(configData, indent=4)))
+            print("")
 
             # The file exists so can we get the config data from it?
             if "core.server.url" in configData:
